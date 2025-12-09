@@ -1,7 +1,8 @@
-// test-functions.js
-import 'dotenv/config'; // automatically loads .env
+// test-functions-v3.js
+import 'dotenv/config'; // load .env automatically
 import { createClient } from '@supabase/supabase-js';
 
+// Grab environment variables
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
@@ -10,8 +11,14 @@ if (!supabaseUrl || !supabaseKey) {
   process.exit(1);
 }
 
+// Create Supabase client
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+/**
+ * Calls a Supabase Edge Function and logs response.
+ * @param {string} functionName - name of the deployed function
+ * @param {Object} payload - object to send as JSON body
+ */
 async function callFunction(functionName, payload) {
   try {
     const { data, error } = await supabase.functions.invoke(functionName, {
