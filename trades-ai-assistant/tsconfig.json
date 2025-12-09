@@ -14,5 +14,5 @@
       "@ui/*": ["packages/ui/*"]
     }
   },
-  "include": ["apps", "packages", "services"]
+  "include": ["apps", "packages", "services", "supabase/functions/handleCall", "supabase/functions/businessTasks", "supabase/functions/handleLead"]
 }

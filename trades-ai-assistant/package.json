@@ -10,10 +10,13 @@
     "dev:web": "pnpm --filter web dev",
     "build:web": "pnpm --filter web build",
     "start:web": "pnpm --filter web start",
-    "lint": "echo \"Add lints\"",
-    "prepare": "pnpm -w -s install"
+    "lint": "echo \"Add lints\""
   },
   "devDependencies": {
     "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.87.1",
+    "node-fetch": "^3.3.2"
   }
 }
