@@ -1,0 +1,19 @@
+{
+  "name": "local-trades-ai",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "start:web": "pnpm --filter web start",
+    "lint": "echo \"Add lints\"",
+    "prepare": "pnpm -w -s install"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
